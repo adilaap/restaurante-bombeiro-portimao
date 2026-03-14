@@ -1,47 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<title>Restaurante Bombeiro Portimão</title>
-<style>
-body{font-family:Arial;background:#111;color:white;text-align:center;margin:0}
-header{padding:40px;background:#000}
-h1{font-size:40px;margin:0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:40px}
-.card{background:#1c1c1c;border-radius:12px;padding:10px}
-img{width:100%;border-radius:10px}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurante Bombeiro Portimão</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 20px;
+      background: #000;
+      border-bottom: 1px solid #222;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #ccc;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .botoes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .botoes a {
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #fff;
+      transition: 0.2s;
+    }
+
+    .whatsapp {
+      background: #25D366;
+    }
+
+    .mapa {
+      background: #c62828;
+    }
+
+    .menu {
+      background: #444;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px 50px;
+    }
+
+    .secao-titulo {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      background: #222;
+    }
+
+    .card h3 {
+      padding: 16px;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    .info {
+      max-width: 900px;
+      margin: 40px auto 0;
+      background: #151515;
+      border-radius: 14px;
+      padding: 25px;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    .info strong {
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #aaa;
+      border-top: 1px solid #222;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      .card img {
+        height: 200px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-<h1>Restaurante Bombeiro Portimão</h1>
-<p>Peixe fresco • Carnes na brasa • Cozinha portuguesa</p>
-</header>
+  <header>
+    <h1>Restaurante Bombeiro Portimão</h1>
+    <p>Peixe fresco • Carnes na brasa • Cozinha tradicional portuguesa</p>
 
-<div class="grid">
+    <div class="botoes">
+      <a class="whatsapp" href="https://wa.me/351964663457?text=Olá,%20gostaria%20de%20ver%20o%20menu%20do%20dia%20e%20fazer%20uma%20reserva." target="_blank">
+        Reservar no WhatsApp
+      </a>
 
-<div class="card">
-<img src="restaurante.jpg">
-<h2>Ambiente do Restaurante</h2>
-</div>
+      <a class="mapa" href="https://www.google.com/maps/search/Rua+dos+Bombeiros+Volunt%C3%A1rios,+Portim%C3%A3o,+8500-649,+Portugal" target="_blank">
+        Ver localização
+      </a>
 
-<div class="card">
-<img src="francesinha.jpg">
-<h2>Francesinha</h2>
-</div>
+      <a class="menu" href="https://wa.me/351964663457?text=Olá,%20quero%20ver%20o%20menu%20do%20dia." target="_blank">
+        Menu do dia
+      </a>
+    </div>
+  </header>
 
-<div class="card">
-<img src="naco.jpg">
-<h2>Naco da Vazia</h2>
-</div>
+  <div class="container">
+    <h2 class="secao-titulo">Destaques do Restaurante</h2>
 
-<div class="card">
-<img src="lagartinhos.jpg">
-<h2>Lagartinhos Grelhados</h2>
-</div>
+    <div class="cards">
+      <div class="card">
+        <img src="restaurante.jpg.jpeg" alt="Ambiente do Restaurante">
+        <h3>Ambiente do Restaurante</h3>
+      </div>
 
-</div>
+      <div class="card">
+        <img src="francesinha.jpg.jpeg" alt="Francesinha">
+        <h3>Francesinha</h3>
+      </div>
+
+      <div class="card">
+        <img src="naco.jpg.jpeg" alt="Naco da Vazia">
+        <h3>Naco da Vazia</h3>
+      </div>
+
+      <div class="card">
+        <img src="lagartinhos.jpg.jpeg" alt="Lagartinhos Grelhados">
+        <h3>Lagartinhos Grelhados</h3>
+      </div>
+    </div>
+
+    <div class="info">
+      <p><strong>Morada:</strong> Rua dos Bombeiros Voluntários, Portimão, 8500-649, Portugal</p>
+      <p><strong>Telefone:</strong> +351 964 663 457</p>
+      <p><strong>Especialidade:</strong> Grelhados, peixe fresco, carnes na brasa e cozinha tradicional portuguesa.</p>
+      <p><strong>Reservas:</strong> Atendimento direto pelo WhatsApp.</p>
+    </div>
+  </div>
+
+  <footer>
+    Restaurante Bombeiro Portimão
+  </footer>
 
 </body>
 </html>
