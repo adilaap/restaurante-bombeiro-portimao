@@ -235,6 +235,41 @@ Peixe fresco • Carnes na brasa • Cozinha tradicional
   <footer>
     Restaurante Bombeiro Portimão
   </footer>
+<script>
+function atualizarStatusRestaurante() {
+  const agora = new Date();
+  const dia = agora.getDay();
+  const hora = agora.getHours();
+  const minuto = agora.getMinutes();
+  const horarioAtual = hora * 60 + minuto;
 
+  let aberto = false;
+
+  if (dia >= 1 && dia <= 5) {
+    if ((horarioAtual >= 540 && horarioAtual <= 930) || (horarioAtual >= 1140 && horarioAtual <= 1320)) {
+      aberto = true;
+    }
+  }
+
+  if (dia === 6) {
+    if (horarioAtual >= 540 && horarioAtual <= 930) {
+      aberto = true;
+    }
+  }
+
+  const status = document.getElementById("status-aberto");
+
+  if (aberto) {
+    status.innerHTML = "🟢 Aberto agora";
+    status.style.color = "#4CAF50";
+  } else {
+    status.innerHTML = "🔴 Fechado agora";
+    status.style.color = "#FF4444";
+  }
+}
+
+atualizarStatusRestaurante();
+</script>
+  
 </body>
 </html>
